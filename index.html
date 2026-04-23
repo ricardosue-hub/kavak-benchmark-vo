@@ -140,12 +140,12 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
     <span class="tag">Benchmark · April 2026</span>
     <h1>¿Cuál es la configuración correcta del retail de VO?</h1>
     <p class="lead">Análisis del paradigma que plantea Carlos (CEO Kavak) contra la realidad operativa de 5 competidores globales. 553 venues scraped en 6 países, 1.6M autos/año analizados, 2 modelos de stock fundamentalmente distintos identificados.</p>
-    <p class="meta">Actualizado 23 Apr 2026, 11:49 · Scraping directo + 10-K filings + OSM + prensa auditada</p>
+    <p class="meta">Actualizado 23 Apr 2026, 11:59 · Scraping directo + 10-K filings + OSM + prensa auditada</p>
 </div>
 
 <nav class="quicknav">
     <a href="#paradigma">Paradigma</a>
-    <a href="#findings">5 Findings</a>
+    <a href="#findings">4 Findings</a>
     <a href="#numero" class="nav-cta">El número</a>
     <a href="#competidores">Competidores</a>
     <a href="#venues">Venues (553)</a>
@@ -191,7 +191,7 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
 </section>
 
 <section id="findings">
-    <h2>Los 5 findings del benchmark — ¿qué nos dice la competencia?</h2>
+    <h2>Los 4 findings del benchmark — ¿qué nos dice la competencia?</h2>
     <p class="lead">Validamos el paradigma de Carlos scrapeando 553 venues de Flexicar, CarMax, Aramis Group y Carvana. Resultado ordenado de inductivo a deductivo.</p>
 
     <div class="findings">
@@ -228,20 +228,6 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
 
         <div class="finding">
             <div class="finding-num">Finding 03</div>
-            <h3>Marketing miente (scraping revela hasta 75% de diferencia)</h3>
-            <p>Mi primer approach fue tomar los números declarados por cada operador. Scraping real revela gaps enormes:</p>
-            <ul>
-                <li><strong>Kavak Cosmopol</strong>: marketing "Más de 800" · real scraped <strong>197 autos</strong> (-75%)</li>
-                <li><strong>Kavak Forum Cuernavaca</strong>: marketing 800 · real <strong>136</strong> (-83%)</li>
-                <li><strong>CarSupermarket Preston</strong>: estimado "3 acres 300 autos" · real <strong>46</strong> (-85%)</li>
-                <li><strong>Flexicar</strong>: declara 1,500 m² para 170-200 autos/tienda — scraping revela avg real 129 autos/tienda, mucha heterogeneidad</li>
-                <li><strong>CarMax</strong>: 10-K dice 300-400 avg — scraping de 256 stores da real avg <strong>354 autos</strong> con variación 108-922</li>
-            </ul>
-            <p class="pf-small">Conclusión: nunca te fíes de los rangos de marketing. El scraping individual por tienda (lo que hace flexicar.es, kavak.com/mx/seminuevos, carmax.com/cars, carsupermarket API) da la verdad.</p>
-        </div>
-
-        <div class="finding">
-            <div class="finding-num">Finding 04</div>
             <h3>El sweet spot global NO es 30-50, es 100-400 autos/tienda</h3>
             <p>67% de los sites scraped caen en 100-400 autos. Es donde el retail de VO está operativamente validado cross-país:</p>
             <ul>
@@ -254,7 +240,7 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
         </div>
 
         <div class="finding">
-            <div class="finding-num">Finding 05</div>
+            <div class="finding-num">Finding 04</div>
             <h3>El diferenciador real no es el tamaño de tienda, es la densidad urbana</h3>
             <p>Flexicar no destaca por tamaño de tienda (avg 129 autos, similar a CarMax). <strong>Destaca por 178 tiendas en España</strong> (47M hab = 1 tienda / 264K hab) vs Kavak 17 en México (128M hab = 1 tienda / 7.5M hab). <strong>Capilaridad 30x mayor</strong>.</p>
             <p>Lo mismo en US: CarMax tiene 256 stores (340M hab = 1 store / 1.3M hab). Kavak está 5x sub-densificado vs CarMax, 30x vs Flexicar.</p>
@@ -3999,7 +3985,7 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
 
 <footer>
     <p><strong>Metodología general:</strong> Scraping directo Playwright (flexicar.es, carmax.com, kavak.com, carsupermarket.com API, clicars.com) + 10-K SEC filings (KMX, CVNA, ARAMI.PA) + prensa especializada (Motor16, FleetPeople, AIM Group) + OpenStreetMap Nominatim geocoding.</p>
-    <p class="small">Generado 23 Apr 2026, 11:49 · v3.0 inductivo→deductivo · Ricardo Sue (Dir. Inventory Access, Kavak Marketplace)</p>
+    <p class="small">Generado 23 Apr 2026, 11:59 · v3.0 inductivo→deductivo · Ricardo Sue (Dir. Inventory Access, Kavak Marketplace)</p>
 </footer>
 
 </div>
