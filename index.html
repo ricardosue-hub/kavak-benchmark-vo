@@ -140,7 +140,7 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
     <span class="tag">Benchmark · April 2026</span>
     <h1>¿Cuál es la configuración correcta del retail de VO?</h1>
     <p class="lead">Análisis del paradigma que plantea Carlos (CEO Kavak) contra la realidad operativa de 5 competidores globales. 553 venues scraped en 6 países, 1.6M autos/año analizados, 2 modelos de stock fundamentalmente distintos identificados.</p>
-    <p class="meta">Actualizado 23 Apr 2026, 11:59 · Scraping directo + 10-K filings + OSM + prensa auditada</p>
+    <p class="meta">Actualizado 23 Apr 2026, 22:18 · Scraping directo + 10-K filings + OSM + prensa auditada</p>
 </div>
 
 <nav class="quicknav">
@@ -197,17 +197,28 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
     <div class="findings">
         <div class="finding">
             <div class="finding-num">Finding 01</div>
-            <h3>Existen dos modelos fundamentalmente distintos de stock</h3>
-            <p>Scrapeando cada tienda individualmente sale claro que hay <strong>dos arquitecturas</strong>, no una sola:</p>
-            <p><strong>Modelo A — Stock distribuido por tienda:</strong> Flexicar (178 tiendas × stock propio), CarMax (256 stores × stock propio), Kavak (15 hubs × stock propio). Cada punto tiene inventario físico.</p>
-            <p><strong>Modelo B — Stock centralizado + delivery points:</strong> Aramisauto (33 agences × ~3,000 pooled), Clicars (6 showrooms × 1,608 pooled), Carvana (15 megasites + 40 vending). El stock vive en pocos centros de reacondicionamiento; las tiendas son puntos de entrega/showroom.</p>
-            <div class="finding-data">
-                <div><div class="k">Modelo A total stock</div><div class="v">~151k autos</div></div>
-                <div><div class="k">Modelo B total stock</div><div class="v">~96k autos</div></div>
-                <div><div class="k">Puntos Mod A</div><div class="v">449</div></div>
-                <div><div class="k">Puntos Mod B</div><div class="v">94</div></div>
+            <h3>Existen 3 modelos de stock (no 2): distribuido puro, híbrido, y pooled</h3>
+            <p>Scrapeando cada tienda individualmente sale claro que hay <strong>3 arquitecturas distintas</strong>. Kavak cae en la categoría intermedia.</p>
+
+            <div class="table-wrap" style="margin: 16px 0">
+                <table>
+                    <thead><tr><th>Modelo</th><th>Stock físico</th><th>Catálogo digital</th><th>Recon</th><th>Operadores</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>A1 — Distribuido puro</strong></td><td>Físico por tienda</td><td>Por tienda (cada sitio muestra solo lo suyo)</td><td>En cada tienda</td><td>🇪🇸 Flexicar (178 tiendas c/u su inventario)</td></tr>
+                        <tr><td><strong>A2 — Distribuido híbrido</strong></td><td>Físico por hub</td><td><strong>Centralizado</strong> (ves todo online)</td><td><strong>Centralizado</strong> (pocos centros)</td><td>🇲🇽 <strong>Kavak</strong>, 🇺🇸 CarMax</td></tr>
+                        <tr><td><strong>B — Pooled / centralizado</strong></td><td>Centralizado en 2-3 warehouses</td><td>Centralizado</td><td>Centralizado</td><td>🇪🇸 Clicars, 🇫🇷 Aramisauto, 🇺🇸 Carvana</td></tr>
+                    </tbody>
+                </table>
             </div>
-            <p class="pf-small">La propuesta de Carlos (hubs chicos 30-50) es <strong>Modelo A</strong>. Esto implica complejidad logística: cada punto es inventario + recon + staff. El Modelo B (Aramis/Clicars) evita ese overhead.</p>
+
+            <p><strong>Cómo lo sé:</strong> scrapeando cada sitio por ubicación:</p>
+            <ul>
+                <li><strong>Kavak (A2)</strong>: cada hub muestra counts distintos en kavak.com/mx/seminuevos/SLUG — Lerma 910, Artz 645, Cosmopol 197. Si fuera pooled mostraría el mismo número en todos.</li>
+                <li><strong>Clicars (B)</strong>: los 6 showrooms muestran el <strong>mismo 1,608</strong> (Madrid = Valencia = Alicante). Pool único en Villaverde.</li>
+                <li><strong>Aramisauto (B)</strong>: 3,000 autos total en 2 refurb centers (Donzère + Nemours). Los 33 agences son delivery points, no almacenes.</li>
+            </ul>
+
+            <p class="pf-small"><strong>Implicación para Carlos:</strong> su propuesta de hubs chicos 30-50 empuja a Kavak MÁS HACIA A2 (más nodos distribuidos, más complejidad). El benchmark sugiere que la alternativa más escalable sería migrar hacia <strong>Modelo B puro</strong> (como Aramis/Clicars) — pocos mega-recon + muchos showrooms chicos pooled. Requiere Draiver-style logística pero elimina overhead por punto.</p>
         </div>
 
         <div class="finding">
@@ -3985,7 +3996,7 @@ footer { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--border
 
 <footer>
     <p><strong>Metodología general:</strong> Scraping directo Playwright (flexicar.es, carmax.com, kavak.com, carsupermarket.com API, clicars.com) + 10-K SEC filings (KMX, CVNA, ARAMI.PA) + prensa especializada (Motor16, FleetPeople, AIM Group) + OpenStreetMap Nominatim geocoding.</p>
-    <p class="small">Generado 23 Apr 2026, 11:59 · v3.0 inductivo→deductivo · Ricardo Sue (Dir. Inventory Access, Kavak Marketplace)</p>
+    <p class="small">Generado 23 Apr 2026, 22:18 · v3.0 inductivo→deductivo · Ricardo Sue (Dir. Inventory Access, Kavak Marketplace)</p>
 </footer>
 
 </div>
